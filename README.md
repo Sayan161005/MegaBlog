@@ -1,16 +1,111 @@
-# React + Vite
+# 📝 MegaBlog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured blogging platform built with **React**, **Redux Toolkit** and **Appwrite**. Users can sign up, log in, write posts with a rich text editor, upload featured images, and manage their own content.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🔐 User authentication (sign up, log in, log out) powered by Appwrite
+- ✍️ Create, edit and delete blog posts
+- 🖋️ Rich text editor using TinyMCE
+- 🖼️ Featured image upload and storage with Appwrite Storage
+- 🗂️ Post status (active / inactive)
+- 🛡️ Protected routes for logged-in users
+- 🧠 Global state management with Redux Toolkit
+- 📋 Form handling and validation with React Hook Form
+- 📱 Responsive UI styled with Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+| Category | Technology |
+| --- | --- |
+| Frontend | React 19, Vite |
+| Routing | React Router DOM |
+| State Management | Redux Toolkit, React Redux |
+| Backend as a Service | Appwrite (Auth, Database, Storage) |
+| Rich Text Editor | TinyMCE (`@tinymce/tinymce-react`) |
+| Forms | React Hook Form |
+| Styling | Tailwind CSS 4 |
+| HTML Rendering | html-react-parser |
+| Linting | ESLint |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm
+- An [Appwrite](https://appwrite.io/) project with a database, collection and storage bucket
+- A [TinyMCE](https://www.tiny.cloud/) API key (if your setup uses one)
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/<your-username>/<your-repo-name>.git
+   cd <your-repo-name>
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+
+   Create a `.env` file in the project root (use `.env.sample` as a reference):
+
+   ```env
+   VITE_APPWRITE_URL=your_appwrite_endpoint
+   VITE_APPWRITE_PROJECT_ID=your_project_id
+   VITE_APPWRITE_DATABASE_ID=your_database_id
+   VITE_APPWRITE_COLLECTION_ID=your_collection_id
+   VITE_APPWRITE_BUCKET_ID=your_bucket_id
+   ```
+
+   > ⚠️ Never commit your real `.env` file. It is already listed in `.gitignore`.
+
+4. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+   The app will be available at `http://localhost:5173`.
+
+## 📜 Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint on the project |
+
+## 🗄️ Appwrite Setup
+
+1. Create a new project in the [Appwrite Console](https://cloud.appwrite.io/).
+2. Add a **Web platform** and allow your local/production domain.
+3. Create a **Database** and a **Collection** for posts with attributes such as `title`, `slug`, `content`, `featuredImage`, `status` and `userId`.
+4. Create a **Storage Bucket** for featured images.
+5. Copy the IDs into your `.env` file.
+
+## 📚 What I Learned
+
+- Structuring a real-world React app with reusable components
+- Managing global state with Redux Toolkit
+- Integrating a backend service (Appwrite) for auth, database and file storage
+- Building protected routes and handling auth state
+- Working with forms using React Hook Form
+- Embedding a rich text editor and safely rendering its HTML output
+
+## 📬 Contact
+
+Made by **SAYAN SAHA** · [GitHub](https://github.com/Sayan161005)
+
+---
+
+⭐ If you found this project helpful, consider giving it a star!
