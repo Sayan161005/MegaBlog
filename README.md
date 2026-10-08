@@ -30,20 +30,25 @@ A full-featured blogging platform built with **React**, **Redux Toolkit** and **
 | HTML Rendering | html-react-parser |
 | Linting | ESLint |
 
-📁 Project Structure
+## 📁 Project Structure
 
-megablog/
+```
+MegaBlog/
 ├── public/
-│   └── vite.svg
 ├── src/
 │   ├── appwrite/              # Appwrite service layer
 │   │   ├── auth.js            # Sign up, login, logout, get current user
 │   │   └── config.js          # Post CRUD and file upload/delete/preview
 │   ├── components/
-│   │   ├── container/         # Layout wrapper
+│   │   ├── container/
+│   │   │   └── Container.jsx  # Layout wrapper
 │   │   ├── Footer/
-│   │   ├── Header/            # Header and logout button
-│   │   ├── post-form/         # Post form used for create/edit
+│   │   │   └── Footer.jsx
+│   │   ├── Header/
+│   │   │   ├── Header.jsx
+│   │   │   └── LogoutBtn.jsx
+│   │   ├── post-form/
+│   │   │   └── PostForm.jsx   # Form used to create and edit posts
 │   │   ├── AuthLayout.jsx     # Protected route wrapper
 │   │   ├── Button.jsx
 │   │   ├── Input.jsx
@@ -67,6 +72,7 @@ megablog/
 │   ├── store/
 │   │   ├── authSlice.js       # Auth state (Redux Toolkit slice)
 │   │   └── store.js           # Redux store setup
+│   ├── App.css
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx               # App entry point and router setup
@@ -74,9 +80,11 @@ megablog/
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
+├── package-lock.json
 ├── package.json
 ├── README.md
 └── vite.config.js
+```
 
 ## 🚀 Getting Started
 
@@ -92,7 +100,7 @@ megablog/
 1. **Clone the repository**
 
    ```bash
-   git clone [https://github.com/Sayan161005/MegaBlog.git](https://github.com/Sayan161005/MegaBlog.git)
+   git clone https://github.com/Sayan161005/MegaBlog.git
    cd MegaBlog
    ```
 
@@ -152,7 +160,7 @@ megablog/
 
 ## 📬 Contact
 
-Made by **SAYAN SAHA** · [GitHub](https://github.com/Sayan161005)
+Made by **SAYAN SAHA** · [GitHub](https://github.com/Sayan161005) 
 
 ---
 
