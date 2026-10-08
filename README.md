@@ -44,8 +44,8 @@ A full-featured blogging platform built with **React**, **Redux Toolkit** and **
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/<your-username>/<your-repo-name>.git
-   cd <your-repo-name>
+   git clone [https://github.com/Sayan161005/MegaBlog.git](https://github.com/Sayan161005/MegaBlog.git)
+   cd MegaBlog
    ```
 
 2. **Install dependencies**
