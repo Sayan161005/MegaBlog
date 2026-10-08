@@ -30,6 +30,54 @@ A full-featured blogging platform built with **React**, **Redux Toolkit** and **
 | HTML Rendering | html-react-parser |
 | Linting | ESLint |
 
+📁 Project Structure
+
+megablog/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── appwrite/              # Appwrite service layer
+│   │   ├── auth.js            # Sign up, login, logout, get current user
+│   │   └── config.js          # Post CRUD and file upload/delete/preview
+│   ├── components/
+│   │   ├── container/         # Layout wrapper
+│   │   ├── Footer/
+│   │   ├── Header/            # Header and logout button
+│   │   ├── post-form/         # Post form used for create/edit
+│   │   ├── AuthLayout.jsx     # Protected route wrapper
+│   │   ├── Button.jsx
+│   │   ├── Input.jsx
+│   │   ├── Login.jsx
+│   │   ├── Logo.jsx
+│   │   ├── PostCard.jsx
+│   │   ├── RTE.jsx            # TinyMCE rich text editor
+│   │   ├── Select.jsx
+│   │   ├── Signup.jsx
+│   │   └── index.js           # Barrel file for component exports
+│   ├── conf/
+│   │   └── conf.js            # Reads environment variables
+│   ├── pages/
+│   │   ├── AddPost.jsx
+│   │   ├── AllPosts.jsx
+│   │   ├── EditPost.jsx
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Post.jsx
+│   │   └── Signup.jsx
+│   ├── store/
+│   │   ├── authSlice.js       # Auth state (Redux Toolkit slice)
+│   │   └── store.js           # Redux store setup
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx               # App entry point and router setup
+├── .env.sample                # Template for environment variables
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.js
+
 ## 🚀 Getting Started
 
 ### Prerequisites
